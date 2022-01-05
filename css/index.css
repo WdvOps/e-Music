@@ -167,22 +167,6 @@ html,body {
     text-align: left;
 }
 
-.main-col .controls {
-    color: rgb(190,190,190);
-    display: inline-flex;
-    gap: 5px;
-}
-
-.main-col .controls span {
-    color: rgb(255, 255, 255);    
-    border: 1px solid rgb(100,100,100);
-    border-radius: 20px;
-    padding: 2px;
-}
-.main-col .controls span:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgba(190, 190, 190, 0.342);
-}
 
 .player {
     width: 100%;
@@ -203,4 +187,124 @@ html,body {
     max-width: 70px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.player-artist h3 {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.player-artist h4 {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.player-artist h3 > span {
+    color: rgb(200,200,200);
+    font-size: 13px;
+}
+.player-album {
+    width: 20%;
+}
+
+.player-album img {
+    max-width: 70px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.player-album h3 {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.player-album h3 > span {
+    color: rgb(200,200,200);
+    font-size: 13px;
+}
+
+.player-control {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.player-control-buttons a {
+    color: rgb(255, 255, 255);
+    margin: 8px 15px;
+}
+/* .player-control-buttons span {
+    font-size: 30px;
+} */
+
+.player-control-progress {
+    width: 100%;
+    max-width: 600px;
+    height: 7px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgb(130,130,130);
+}
+
+.player-control-progress-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 7px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+
+@media  screen and  (max-width: 1600px) {
+    .main-col {
+        width: 20%;
+    }
+}
+@media  screen and  (max-width: 980px) {
+    .main-col {
+        width: 48%;
+        margin-right: 2%;
+    }
+}
+@media  screen and  (max-width: 768px) {
+    .main-col {
+        width: 48%;
+        margin-right: 2%;
+    }
+}
+
+@media  screen and  (max-width: 640px) {
+    .main-col {
+        width: 68%;
+        margin-right: 5%;
+    }
+}
+
+@media  screen and  (max-width: 540px) {
+    .main {
+        width: 100%;
+    }
+    .sidebar {
+        display: none;
+    }
+    .main-col {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+    }
 }
