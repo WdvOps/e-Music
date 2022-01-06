@@ -147,9 +147,15 @@ html,body {
 }
 
 .main-col:hover {
-    background-color: #333333;
+    background-color: #4b4b4b;
     box-shadow: rgba(5, 5, 5, 0.788) 0px 0px 16px;
 }
+
+.selected {
+    background-color: #4b4b4b;
+    box-shadow: rgba(5, 5, 5, 0.788) 0px 0px 16px;
+}
+
 .main-col img {
     max-width: 120px;
     width: 100%;
@@ -243,11 +249,18 @@ html,body {
 
 .player-control-buttons a {
     color: rgb(255, 255, 255);
-    margin: 8px 15px;
+    margin: 8px 10px;
 }
-/* .player-control-buttons span {
-    font-size: 30px;
-} */
+
+.player-control-buttons a span {
+    font-size: 30px;    
+    background-color: #0e101b3b;
+    border-radius: 50%;
+    padding: 6px;
+}
+.player-control-buttons a span:hover {  
+    background-color: #0e101b5b;    
+}
 
 .player-control-progress {
     width: 100%;

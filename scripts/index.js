@@ -1,5 +1,6 @@
 // Variáveis Globais
 let audioPlayer = document.getElementById('audioPlayer');
+let cards = document.querySelectorAll('.main-col');
 let loaded = false;
 
 
@@ -8,6 +9,8 @@ let loaded = false;
 
 let playButton = document.getElementById('playerBtn');
 let pauseButton = document.getElementById('pauseBtn');
+
+
 //PLAY
 const playMusic = (file) => {
     if (loaded == false) {
@@ -16,38 +19,66 @@ const playMusic = (file) => {
     }
 
     audioPlayer.play();
-    playButton.style.display = "inline"
-    pauseButton.style.display = "none"
+    console.log('Play')
+    playButton.style.display = "none"
+    pauseButton.style.display = "inline"
 }
 
 //PAUSE
 pauseButton.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('Pause')
+    alert('Pausada')
     playButton.style.display = "inline"
     pauseButton.style.display = "none"
 
     return false;
 })
 
-// CARD PLAY
+//Play
+playButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    alert('Tocando')
+    playButton.style.display = "none"
+    pauseButton.style.display = "inline"
 
+    return false;
+})
+
+//CARD PLAY
 document.querySelectorAll('.main-col').forEach(item => {
 
     item.addEventListener('click', event => {
         let image = item.getAttribute('data-image');
         let artist = item.getAttribute('data-artist');
-        let music = item.getAttribute('data-music');
+        let song = item.getAttribute('data-song');
         let album = item.getAttribute('data-album');
-        let ranking = item.getAttribute('data-ranking')
+        let ranking = item.getAttribute('data-ranking');
         let file = item.getAttribute('data-file');
+
 
         let playerArtistComponent = document.getElementsByClassName('player-artist');
 
         playerArtistComponent[0].innerHTML = `
         <img src="${image}" />>
-        <h3> ${artist} <br/><span> ${album} </span> </h3>
-        <h3> ${music} <br/> <span>${ranking}</span></h3>
+        <h3>${artist} <br/><span> ${album} </span> </h3>
+        <h3> ${song} <span> ${ranking}</span></h3>
         `
     })
 })
+
+// Remove seleção dos cards
+function removeClass() {
+    let cards = document.querySelectorAll('.main-col');
+
+    cards.foreach(card => {
+        if (card.classList.contains('selected'))
+            card.classList.remove('selected')
+    })
+}
+
+// Adiciona seleção dos cards
+function selected(element) {
+
+    removeClass();
+    element.classList.add('visited')
+}
