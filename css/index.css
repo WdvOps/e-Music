@@ -133,6 +133,11 @@ html,body {
     color: rgb(190,190,190);
 }
 
+.cards {
+    width: 100%;
+    display: flex;
+}
+
 .main-col {
     cursor: pointer;
     width: 10%;
@@ -151,7 +156,7 @@ html,body {
     box-shadow: rgba(5, 5, 5, 0.788) 0px 0px 16px;
 }
 
-.selected {
+.main-col.selected {
     background-color: #4b4b4b;
     box-shadow: rgba(5, 5, 5, 0.788) 0px 0px 16px;
 }
