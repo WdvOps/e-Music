@@ -110,14 +110,15 @@
                 <div class="main-row-title">
                     <h2>Favoritas</h2>
                 </div>
-                <div class="main-col" data-image="assets/images/thumbs/gunsNroses.jpg" data-artist="Guns N' Roses"
-                    data-song=" Sweet Child O' Mine" data-album="Appetite For Destruction" data-ranking="Top Hit"
-                    data-file="Sweet-Child-O-Mine.mp3" onclick="selected(this)">
-                    <img src="assets/images/thumbs/gunsNroses.jpg" alt="">
-                    <h3>Guns n' Roses</h3>
-                    <P>Ouça sua música favorita pela e-Music</P>
+                <div class="cards">
+                    <div class="main-col template" data-image="" data-artist="" data-song="" data-album=""
+                        data-ranking="" data-file="" onclick="selected(this)">
+                        <img src="" />
+                        <h3></h3>
+                        <P></P>
 
-                </div> <!-- MAIN COLLUMNS-->
+                    </div><!-- MAIN COLLUMNS-->
+                </div>
 
                 <div class="main-col" data-image="assets/images/thumbs/gorillaz.jpg" data-artist="Gorillaz"
                     data-song="Clint Eastwood" data-album="Clint Eastwood" data-ranking="Top 02"
@@ -149,41 +150,72 @@
         <div class="player-artist">
 
         </div>
-        <div class="player-albun">
 
-        </div>
-        <div class="player-albun">
-
-        </div>
         <div class="player-control">
-            <div class="player-control-buttons">
-                <a href="#"><span class="material-icons">
-                        skip_previous
-                    </span></a>
-                <a style="display: none;" id="pauseBtn" href="#"><span class="material-icons">
-                        pause
-                    </span></a>
-                <a id="playerBtn" href="#"><span class="material-icons">
-                        play_arrow
-                    </span></a>
-                <a href="#"><span class="material-icons">
-                        stop
-                    </span></a>
-                <a href="#"> <span class="material-icons">
-                        skip_next
-                    </span></a>
-            </div>
-
-
-            <div class="player-control-progress">
-                <div style="width: 60%" class="player-control-progress-progress"></div>
+            <div class="progress-area">
+                <div class="progress-bar">
+                    <audio id="main-audio" src=""> </audio>
+                </div>
+                <div class="song-timer">
+                    <span span class="current-time"> 0:00 </span>
+                    <span span class="max-duration"> 0:00 </span>
+                </div>
             </div>
         </div>
-
+    </div>
     </div>
     <!--player-->
 
-    <audio id="audioPlayer" style="position: absolute; left:0; top:0; z-index: -999; opacity: 0;" controls=""></audio>
+    <!--PLAYER POUPUP-->
+    <div class="back-player-poupup"></div>
+
+    <div class="wrapper" id="player_poupup">
+        <div class="top-bar">
+            <i class="material-icons"> expand_more </i>
+            <span> Tocando agora <span>
+                    <i class="material-icons"> more_horiz </i>
+        </div>
+        <div class="img-area">
+
+        </div>
+        <div class="song-details">
+            <p p class="name"> </p>
+            <p p class="artist"> </p>
+        </div>
+        <div class="progress-area">
+            <div class="progress-bar">
+                <audio id="main-audio" src=""> </audio>
+            </div>
+            <div class="song-timer">
+                <span span class="current-time"> 0:00 </span>
+                <span span class="max-duration"> 0:00 </span>
+            </div>
+        </div>
+        <div class="controls">
+            <i id="stopBtn" class="material-icons" title=""> stop </i>
+            <i id="prev" class="material-icons"> skip_previous </i>
+            <div class="play-pause">
+                <i i id="playerBtn" class="material-icons play"> play_arrow </i>
+                <i i style="display: none;" id="pauseBtn" class="material-icons play"> pause </i>
+            </div>
+            <i i id="next" class="material-icons"> skip_next </i>
+        </div>
+        <div class="music-list">
+            <div class="header">
+                <div div class="row">
+                    <i i class="list material-icons"> queue_music </i>
+                    <span span> Lista de músicas </span>
+                </div>
+                <i i id="close" class="material-icons"> fechar </i>
+            </div>
+            <ul>
+                <!-- aqui li lista vem de js -->
+            </ul>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" style="position: absolute; left:0; top:0; z-index: -999; opacity: 0;"
+        controls="controls"></audio>
 
     <script src="scripts/index.js"></script>
 </body>
